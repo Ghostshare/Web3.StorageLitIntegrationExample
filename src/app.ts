@@ -44,7 +44,7 @@ document.getElementById('retrieveFromWeb3Storage')?.addEventListener('click', as
     // @ts-ignore
     console.log('this is the CID you\'re retrieving: ', cid)
     const decryptedFile: File = await web3StorageLitIntegration.retrieveAndDecryptFile(cid)
-    document.getElementById('decryption').innerHTML = '<p>Retrieved file: ' + decryptedFile.name + '<p>'
+    document.getElementById('decryption').innerHTML = '<p>Retrieved file Name: ' + decryptedFile.name + ' - Type: ' + decryptedFile.type + ' - Size: ' + decryptedFile.size + ' bytes<p>'
     saveData(decryptedFile, decryptedFile.name)
   }
 })
